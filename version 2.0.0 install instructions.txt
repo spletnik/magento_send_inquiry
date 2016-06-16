@@ -1,4 +1,0 @@
-If you use rwd template copy all files, if not:
-
-Go to /app/design/frontend/rwd and copy the contents in /app/design/frontend/{nameofyourtemplate}
-Go to /skin/frontend/rwd and copy the contents in /skin/frontend/frontend/{nameofyourtemplate}
