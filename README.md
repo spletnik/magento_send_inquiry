@@ -34,4 +34,4 @@ Inquiry:
 - extension is compatible with version: 1.4.x, 1.5.x, 1.6.x. 1.7x, 1.8x, 1.9x
 
 ## Installation
-More info about installation is [here](doc/INSTALL.md)
+More info about installation is [here](doc/INSTALL.md).
