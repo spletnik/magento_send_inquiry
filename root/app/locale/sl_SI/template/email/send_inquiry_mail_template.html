@@ -1,0 +1,56 @@
+<!--@subject Novo povpraševanje @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"skin url=\"images/logo_email.gif\" _area='frontend'":"Email Logo Image",
+"store url=\"customer/account/\"":"Customer Account Url",
+@-->
+<!--@styles
+body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
+@-->
+
+<body style="background:#F6F6F6; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<div style="background:#F6F6F6; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+    <table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+        <tr>
+            <td align="center" valign="top" style="padding:20px 0 20px 0">
+                <!-- [ header starts here] -->
+                <table bgcolor="FFFFFF" cellspacing="0" cellpadding="10" border="0" width="650"
+                       style="border:1px solid #E0E0E0;">
+                    <tr>
+                        <td valign="top">
+                            <a href="{{store url=""}}" style="color:#1E7EC8;"><img src="{{skin url=" images/logo_email.gif"
+                            _area='frontend'}}" alt="{{var store.getFrontendName()}}" border="0"/></a>
+                        </td>
+                    </tr>
+                    <!-- [ middle starts here] -->
+                    <tr>
+                        <td valign="top">
+                            Pozdravljeni!
+                            <br/><br/>
+                            Prejeli ste novo povpraševanje za produkt <a href="{{var data.url}}">{{var
+                            data.article}}</a>.
+                            <br/><br/>
+                            Podatki o stranki:
+                            <ul>
+                                <li>
+                                    Ime in priimek: {{var data.name}} {{var data.last_name}}
+                                </li>
+                                <li>
+                                    Email: {{var data.email}}
+                                </li>
+                                <li>
+                                    Telefon: {{var data.phone}}
+                                </li>
+                                <li>
+                                    Komentar: {{var data.content}}
+                                </li>
+                            </ul>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>

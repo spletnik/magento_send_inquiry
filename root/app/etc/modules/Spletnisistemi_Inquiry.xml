@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Spletnisistemi_Inquiry>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Spletnisistemi_Inquiry>
+    </modules>
+</config>

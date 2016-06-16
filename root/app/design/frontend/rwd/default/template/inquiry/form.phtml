@@ -1,0 +1,65 @@
+<?php
+// da ni napak, ce uporabnik ni logiran
+$firstname = "";
+$lastname = "";
+$email = "";
+
+if ($this->helper('customer')->isLoggedIn()) {
+
+    $customer = Mage::getSingleton('customer/session')->getCustomer();
+    $email = $customer->getEmail();        // To get Email Id of a customer
+    $firstname = $customer->getFirstname();    // To get Firstname of a customer
+    $lastname = $customer->getLastname();     // To get Last name of a customer
+}
+
+$_product = Mage::getModel('catalog/product')->load($productId);
+
+?>
+
+<div id="sendInquiryForm">
+    <div id="formSendInquiryW">
+        <div class="errors"></div>
+        <br><span
+            class="inquiryTitle"><?php echo $this->__('Inquiry for product') ?><?php echo $_product->getName(); ?></span><br><br>
+        <form id="formSendInquiry" name="formSendInquiry" method="post"
+              action="<?php echo Mage::getUrl("inquiry/index/save"); ?>">
+            <fieldset>
+                <ol>
+                    <li>
+                        <label for="name"><?php echo $this->__('Name') ?><span class="require">*</span></label>
+                        <input id="name" type="text" value="<?php echo $firstname; ?>" name="name" class=""/>
+                    </li>
+                    <li>
+                        <label for="last_name"><?php echo $this->__('Last name') ?><span
+                                class="require">*</span></label>
+                        <input id="last_name" type="text" name="last_name" value="<?php echo $lastname; ?>"/>
+
+                    </li>
+                    <li>
+                        <label for="email"><?php echo $this->__('E-mail') ?><span class="require">*</span></label>
+                        <input id="email" type="text" name="email" class="" value="<?php echo $email; ?>"/>
+
+                    </li>
+                    <li>
+                        <label for="phone"><?php echo $this->__('Phone') ?></label>
+                        <input id="phone" type="text" name="phone"/>
+
+                    </li>
+                    <li>
+                        <label for="content"><?php echo $this->__('Content') ?><span class="require">*</span></label>
+                        <textarea id="content" name="content" class=""></textarea>
+                    </li>
+                    <li>
+                        <input class="submitButton" id="article" type="hidden" name="article"
+                               value="<?php echo $productId; /* $_product->getData('name'); */ ?>"/>
+                        <div class="message" style="padding-right: 20px; display: inline-block;">Polja označena z * so
+                            obvezna.
+                        </div>
+                        <input class="submitButton" id="submit" type="submit" name="submit"
+                               value="<?php echo $this->__('Submit'); ?>"/>
+                    </li>
+                </ol>
+            </fieldset>
+        </form>
+    </div>
+</div>
