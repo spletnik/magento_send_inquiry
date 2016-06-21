@@ -1,4 +1,4 @@
-# Installation
+# Installation manual
 ## Installation
 - Copy all files in to the root of your Magento web shop. When asked if you want to overwrite the files, click "Yes to all".
 
@@ -12,4 +12,3 @@
 
 ## Notes
 **Important!** Depend od shop configuration, sometimes there are some problems with path. If pop up doesn't show when clicking to Inquiry button, open inquiry.js and in line 30 change _url: currentUrl + "inquiry/index/showForm",_ into _url: "example.com/inquiry/index/showForm",_ where example.com is your domain.
-
